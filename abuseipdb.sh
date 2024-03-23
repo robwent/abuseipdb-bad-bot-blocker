@@ -11,10 +11,11 @@
 ABUSEIPDB_KEY="your-key"
 ABUSEIPDB_FILE_PATH=/etc/nginx/bots.d/abuseipdb
 ABUSEIPDB_CONFIDENCE=90
+ABUSEIPDB_LIMIT=9999999
 
 echo "#AbuseIPDB - Confidence: $ABUSEIPDB_CONFIDENCE" > $ABUSEIPDB_FILE_PATH;
 echo "" >> $ABUSEIPDB_FILE_PATH;
-response=`curl -s -L "https://api.abuseipdb.com/api/v2/blacklist?confidenceMinimum=$ABUSEIPDB_CONFIDENCE" \
+response=`curl -s -L "https://api.abuseipdb.com/api/v2/blacklist?confidenceMinimum=$ABUSEIPDB_CONFIDENCE&limit=$ABUSEIPDB_LIMIT" \
   -H "Key: $ABUSEIPDB_KEY" \
   -H "Accept: text/plain"`
 
