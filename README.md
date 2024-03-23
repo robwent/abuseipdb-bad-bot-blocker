@@ -1,5 +1,7 @@
 # Integrate the AbuseIPDB with NGINX Ultimate Bad Bot Blocker
 
+This script is intended for use with the [NGIX Ultimate Bad Bot Blocker](https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker)
+
 With a free account at AbuseIPDB, you can perform 10 requests per day and get 10k results back max.  
 With a paid account, a confidence level of 90% returns around 60k IP addresses.
 
