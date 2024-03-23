@@ -3,8 +3,8 @@
 # Save this file as /usr/local/sbin/update-abuseipdb.sh
 # Edit api key and confidence level
 # Make it Executable chmod 700 /usr/local/sbin/update-abuseipdb.sh
-# Daily Cron as root
-# 0 0 * * * /usr/local/sbin/update-abuseipdb.sh > /dev/null 2>&1
+# Daily Cron as root (every 4 hours)
+# 0 */4 * * * /usr/local/sbin/update-abuseipdb.sh > /dev/null 2>&1
 # Include the output in /etc/nginx/bots.d/blacklist-ips.conf
 # include /etc/nginx/bots.d/abuseipdb;
 

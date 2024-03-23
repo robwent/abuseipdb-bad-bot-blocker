@@ -12,8 +12,8 @@ Modify the contents to add your API key and confidence level
 Make the file executable  
 `chmod 700 /usr/local/sbin/update-abuseipdb.sh`
 
-Set a cron job as root to update the file at an interval of your choice  
-`0 0 * * * /usr/local/sbin/update-abuseipdb.sh > /dev/null 2>&1`
+Set a cron job as root to update the file at an interval of your choice (The example will update every 4 hours, 6 times a day)  
+`0 */4 * * * /usr/local/sbin/update-abuseipdb.sh > /dev/null 2>&1`
 
 Include the output in /etc/nginx/bots.d/blacklist-ips.conf  
 `nano /etc/nginx/bots.d/blacklist-ips.conf`
